@@ -25,10 +25,10 @@ gdown
 tqdm
 resampy
 # RVC Dependencies
-faiss-cpu
-torchcrepe
-praat-parselmouth
-git+https://github.com/facebookresearch/fairseq.git
+# faiss-cpu
+# torchcrepe
+# praat-parselmouth
+# git+https://github.com/facebookresearch/fairseq.git
 noisereduce
 diffq
 moviepy<2.0.0
