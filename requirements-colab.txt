@@ -1,5 +1,5 @@
-# Colab-Optimized Requirements (Minimal - No RVC)
-# Core functionality without the problematic fairseq dependency
+# Colab-Optimized Requirements (Python 3.12 Compatible)
+# Install TTS from GitHub for Python 3.12 compatibility
 
 # Audio Processing
 openai-whisper
@@ -13,7 +13,8 @@ diffq
 
 # Voice Cloning & TTS
 chatterbox-tts
-TTS
+# TTS from git for Python 3.12 support
+git+https://github.com/coqui-ai/TTS.git@dev
 transformers
 
 # Translation
@@ -21,7 +22,7 @@ deep-translator
 openai
 
 # Diarization
-pyannote.audio<3.1
+pyannote.audio
 huggingface_hub
 
 # Video Processing
