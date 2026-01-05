@@ -2,13 +2,12 @@ import os
 import json
 import time
 from openai import OpenAI, RateLimitError, APIConnectionError, AuthenticationError
-from openai import OpenAI, RateLimitError, APIConnectionError, AuthenticationError
 from deep_translator import GoogleTranslator
 from src.config import Config
 
 class Translator:
     def __init__(self, target_language="en", service_override=None):
-        self.target_languge = target_language
+        self.target_language = target_language  # Fixed typo: was "target_languge"
         
         # Determine service: explicit override > config > default
         self.service = service_override if service_override else Config.TRANSLATION_SERVICE
@@ -18,7 +17,7 @@ class Translator:
         print(f"Initializing Translator Service: {self.service}")
 
         # Initialize fallback translator (always available)
-        self.fallback_translator = GoogleTranslator(source='auto', target=self.target_languge)
+        self.fallback_translator = GoogleTranslator(source='auto', target=self.target_language)
 
         if self.service == "google":
             print("Selected Google Translate (Non-LLM).")
@@ -72,14 +71,14 @@ class Translator:
             print("[INFO] No LLM API Key. Using Google Translate directly.")
             return self._use_fallback_translation(segments)
 
-        print(f"Translating {len(segments)} segments to {self.target_languge} via LLM ({self.model})...")
+        print(f"Translating {len(segments)} segments to {self.target_language} via LLM ({self.model})...")
         
         # Prepare the payload
         # Minimal payload to save tokens/complexity
         transcript_text = "\n".join([f"{i}: [Duration: {seg.get('duration', 0):.2f}s] {seg['text']}" for i, seg in enumerate(segments)])
         
         system_prompt = (
-            f"You are a professional dubbing translator. Translate the following transcript lines to {self.target_languge}. "
+            f"You are a professional dubbing translator. Translate the following transcript lines to {self.target_language}. "
             "CRITICAL: The translation must be concise to match the original speaking duration. "
             "If the target language naturally takes longer, shorten the phrasing or omit filler words while keeping the core meaning. "
             "The input format is 'Line ID: [Duration: Xs] Text'. "

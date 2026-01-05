@@ -4,7 +4,7 @@ transformers
 openai-whisper
 librosa
 soundfile
-numpy<1.26.0
+numpy<2.0.0
 scipy
 ffmpeg-python
 deep-translator
@@ -12,6 +12,8 @@ pydub
 demucs>=4.0.0
 gradio_client
 huggingface_hub[hf_xet]
+python-dotenv
+shutil-backports
 pyannote.audio<3.1
 # For emotion analysis
 chatterbox-tts
@@ -29,3 +31,7 @@ praat-parselmouth
 git+https://github.com/facebookresearch/fairseq.git
 noisereduce
 diffq
+moviepy<2.0.0
+requests
+gradio
+

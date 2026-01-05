@@ -1,4 +1,17 @@
+---
+title: Video Dubber Studio
+emoji: 🎙️
+colorFrom: blue
+colorTo: indigo
+sdk: gradio
+sdk_version: 5.9.1
+app_file: app.py
+pinned: false
+license: mit
+---
+
 # Jarair Ahmad - AI Video Dubber (Studio Level)
+
 
 **Jarair Ahmad** is a professional-grade AI video dubbing pipeline designed to provide high-quality, multi-speaker voice cloning and dubbing. It leverages state-of-the-art models for source separation, speaker diarization, and voice synthesis to create seamless localized videos.
 

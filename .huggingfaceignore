@@ -1,0 +1,16 @@
+# Ignore heavy/model artifacts and temporary outputs when uploading to Spaces
+src/Wav2Lip/checkpoints/
+checkpoints/
+temp/
+output/
+separated/
+bgm/
+*.pth
+*.pt
+*.ckpt
+*.tar
+__pycache__/
+*.pyc
+.git/
+.gitignore
+node_modules/
