@@ -1,0 +1,31 @@
+torch
+torchaudio
+transformers
+openai-whisper
+librosa
+soundfile
+numpy<1.26.0
+scipy
+ffmpeg-python
+deep-translator
+pydub
+demucs>=4.0.0
+gradio_client
+huggingface_hub[hf_xet]
+pyannote.audio<3.1
+# For emotion analysis
+chatterbox-tts
+openai
+TTS
+# Wav2Lip Dependencies
+opencv-python
+gdown
+tqdm
+resampy
+# RVC Dependencies
+faiss-cpu
+torchcrepe
+praat-parselmouth
+git+https://github.com/facebookresearch/fairseq.git
+noisereduce
+diffq

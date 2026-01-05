@@ -1,0 +1,12 @@
+The system is now "Studio Grade", but if you want to reach Hollywood Level, here are the 3 final missing pieces:
+
+Face Restoration (Fixing the "Blurry Mouth"):
+Problem: The current AI (Wav2Lip) generates lips at low resolution (96p), so the mouth looks slightly blurry compared to the rest of the HD video.
+Fix: Integrate CodeFormer or GFPGAN. These are "Face Enhancer" AIs that sharpen the face after lip-syncing.
+Auto-Subtitles (Burned In):
+Problem: The video is dubbed, but text on screen remains English.
+Fix: Generate Hindi/Urdu Subtitles and burn them into the video automatically using ffmpeg.
+Background Noise Removal (Clean Plate):
+Problem: Sometimes the AI voice has slight static, or the background music removal leaves "ghost vocals".
+Fix: Add a "Voice Isolation" pass using a model like UVR5 (Ultimate Vocal Remover) before cloning.
+Recommendation: Start with #1 (Face Restoration). It makes the biggest visual difference. Shall I implement that? (It requires downloading another AI model).
