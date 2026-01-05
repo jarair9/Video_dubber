@@ -1,0 +1,37 @@
+# Colab-Optimized Requirements (Minimal - No RVC)
+# Core functionality without the problematic fairseq dependency
+
+# Audio Processing
+openai-whisper
+librosa
+soundfile
+scipy
+pydub
+demucs>=4.0.0
+noisereduce
+diffq
+
+# Voice Cloning & TTS
+chatterbox-tts
+TTS
+transformers
+
+# Translation
+deep-translator
+openai
+
+# Diarization
+pyannote.audio<3.1
+huggingface_hub
+
+# Video Processing
+ffmpeg-python
+opencv-python
+
+# Wav2Lip
+gdown
+resampy
+
+# Utils
+tqdm
+gradio
